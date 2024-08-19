@@ -2,11 +2,9 @@
 
 This repository contains the implementation of the research paper titled **"A Simple Approach to Pavement Cell Segmentation"** by Rostislav Shepel, Andrew Romanowski, and Mario Valerio Giuffrida.
 
-## Overview
+## Abstract
 
-This study focuses on segmenting pavement cells from microscopy images of *Arabidopsis thaliana* plants, which is critical for linking cellular traits to overall plant performance. The paper proposes a simple, easy-to-train approach using partially annotated datasets to address the challenges of irregular pavement cell shapes.
-
-Two well-known segmentation architectures, U-Net and DeepLabV3, were employed for segmentation, showing that both models can perform well despite the constraints. Post-segmentation, PaCeQuant was used to extract phenotyping data, demonstrating the effectiveness of this method.
+This study focuses on segmenting pavement cells from microscopy images of Arabidopsis thaliana plants, which is critical for linking cellular traits to overall plant performance. Differently than the current state-of-the-art, we propose a simple, easy-to-train approach using partially annotated datasets to address the challenges of irregular pavement cell shapes. Specifically, we employed U-Net and DeepLabV3 architectures for segmentation, showing that both models can perform well despite the constraints. Post-segmentation, we used PaCeQuant to extract phenotyping data, demonstrating the effectiveness of our method. The results indicate that U-Net provides a slightly closer match to the true mask, though DeepLabV3 also performs robustly. This approach facilitates more accurate and efficient plant phenotyping, contributing to sustainable agricultural practices.
 
 ## Repository Contents
 
@@ -32,7 +30,7 @@ If you prefer to run the notebooks locally:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-username/pavement-cell-segmentation.git
+    git clone https://github.com/Rosti35/pavement-cell-segmentation
     ```
 2. Install the required Python packages:
     ```bash
