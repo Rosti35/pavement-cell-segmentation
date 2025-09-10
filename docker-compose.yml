@@ -1,0 +1,26 @@
+
+services:
+  pavement-segmentation:
+    build: .
+    volumes:
+      - ./images/input:/app/input:ro
+      - ./images/output:/app/output
+    command: ["/app/input", "/app/output", "--device", "cpu", "--debug"]
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  pavement-segmentation-gpu:
+    build: .
+    volumes:
+      - ./images/input:/app/input:ro
+      - ./images/output:/app/output
+    command: ["/app/input", "/app/output", "--device", "cuda", "--debug"]
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
